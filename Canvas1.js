@@ -1,19 +1,30 @@
 
 
-setup = function() {
-	// Grab the body element using document.getElementById,
-	// assume the body element has an id of 'body'.
-	// Create a canvas element using document.createElement,
-	// then set the width and height properties to 1200 and
-	// 720, respectively.
-	// Finally, append the canvas element to the body.
-	var body = document.getElementById("body");
-	var canvas = document.createElement("canvas");
-	canvas.width = 1200
-	canvas.height = 720
 
+setup = function() {
+	var body = document.getElementById('body');
+	var canvas = document.createElement('canvas');
+
+	var context = canvas.getContext('2d');
+	
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+
+	body.appendChild(canvas);
+
+	// Create a new image with a src of "/media/js/standalone/libs/gamedev_assets/ralphyrobot.png" and onload of onImageLoad
 	// YOUR CODE HERE
-    body.appendChild(canvas);
+    var img = new Image();
+    img.onload=onImageLoad;
+    img.src="/media/js/standalone/libs/gamedev_assets/ralphyrobot.png";
+};
+
+onImageLoad = function(){
+	// Use the console.log function to print a statement to the browser console.
+	// This will print once the image has been downloaded.
+	// YOUR CODE HERE
+    console.log("Bam!!");
 };
 
 setup();
+
