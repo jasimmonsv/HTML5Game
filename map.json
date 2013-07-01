@@ -1493,7 +1493,7 @@
 	"tileheight": 64,
 	"tilesets": [{
 		"firstgid": 1,
-		"image": "..\/..\/..\/..\/..\/Dropbox\/grits\/grits_master.png",
+		"image": "/media/img/gamedev/grits_master.png",
 		"imageheight": 2048,
 		"imagewidth": 2048,
 		"margin": 0,
